@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance=axios.create({
-    baseURL:'https://eventbookingsystem-db.onrender.com',
+    baseURL:'http://localhost:4000/api/',
     timeout:5000,
 });
 
