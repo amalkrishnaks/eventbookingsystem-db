@@ -1,0 +1,112 @@
+.contact{
+    height: 800px;
+    width: 100%;
+    /* margin-top: 50px; */
+    
+    /* background-color: burlywood; */
+}
+
+.header-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    /* background-color: aqua; */
+}
+
+.center-part{
+    height: 600px;
+    width: 100%;
+    /* background-color: rgb(236, 113, 113); */
+    display: flex;
+    gap: 20px;
+}
+
+.info{
+    height: 600px;
+    width: 50%;
+    /* background-color: blueviolet; */
+    background-image: url("./public/contact-bg-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.contact-part{
+    height: 600px;
+    width: 50%;
+    box-shadow: 0px 0px 10px 0px rgb(139, 177, 208);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.call-detail{
+    
+    height: 200px;
+    width: 300px;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.contact-form{
+    width: 100%;
+    max-width: max(30%,500px);
+    /* background-color: cornsilk; */
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.contact-form input{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: tomato;
+    
+}
+.contact-form .multi-fields{
+    display: flex;
+    gap: 10px;
+}
+.contact-form button{
+    padding: 10px;
+    background-color: green;
+    margin-right: 300px;
+    border-radius: 5px;
+
+}
+.fotter{
+    margin-top: 20px;
+}
+
+@media (max-width:400px) {
+ .contact{
+    min-height: 700px;
+ }   
+
+ .center-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 900px;
+    /* background-color: aqua; */
+ }
+ .info{
+    min-height: 400px;
+    width: 70%;
+ }
+ .contact-part{
+    min-height: 400px;
+    width: 70%;
+ }
+}

@@ -1,0 +1,236 @@
+.modal .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 140vh;
+    background-color: black;
+    opacity: 0.4;
+    cursor: pointer;
+    z-index: 1;
+    
+}
+
+.modal-box{
+    width:  35vw;
+    height: 35vh;
+    border-radius: 12px;
+    box-shadow: 0px 10px 10px 0px rgba(255, 255, 255, 0.324);
+    background-color: white;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    
+}
+
+.inside-modal{
+    height: 150px;
+    width: 500px;
+    border-radius: 10px;
+    /* border: 1px solid wheat; */
+    box-shadow: 0px 0px 10px 0px rgb(216, 205, 205);
+    position: absolute;
+    left: 20px;
+    bottom: 70px;
+    display: flex;
+
+}
+.modal-event-details{
+    height: 150px;
+    width: 40vw;
+    /* background-color: rgb(164, 164, 206); */
+    padding: 5px;
+}
+
+.modal-event-ticketvalue{
+    height: 150px;
+    width: 120px;
+    /* background-color: cadetblue; */
+}
+.modal-event-ticketvalue .add{
+    width: 25px;
+    position: absolute;
+    border: 15px;
+    top: 50px;
+    right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgb(192, 165, 216);
+}
+
+.event-item-counter{
+    position: absolute;
+    bottom: 70px;
+    right: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding:4px;
+    border-radius: 50px;
+    background-color: rgba(97, 169, 79, 0.913);
+}
+
+.event-item-counter .math{
+    height: 22px;
+    width: 30px;
+    
+}
+
+.event-item-counter p{
+    position: absolute;
+    top: 3px;
+    
+}
+
+.footer{
+    height: 80px;
+    width: 35vw;
+    /* background-color: aqua; */
+    position: absolute;
+    top: 205px;
+    border-radius: 20px;
+}
+
+.totalprice{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    box-shadow: 0px 0px 10px 0px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.continue{
+    position: absolute;
+    left: 440px;
+    top: 5px;
+}
+
+.click{
+    border-radius: 10px;
+    padding: 8px;
+    background-color: green;
+    cursor: pointer;
+}
+
+
+/* Responsive */
+
+@media (max-width:1024px) {
+    .modal .cover{
+        opacity: 0;
+        z-index: 1;
+        
+    }
+
+    .modal-box{
+        height: 260px;
+        width: 400px;     
+        z-index: 2;
+        background-color: rgb(124, 240, 22);
+        position: relative;
+    }
+    .inside-modal{
+        position: absolute;
+        width:90%;
+        top: 15%;
+        background-color: aqua;
+    }
+    .click{
+        position: absolute;
+        right: 150px;
+    }
+    .modal-event-details h2{
+        font-size: 17px;
+    }
+    .footer p{
+        margin-top: 0px;
+        margin-left: 15px;
+    }
+    .continue{
+        margin-left: 90px;
+        
+    }
+}
+
+@media (max-width:768px) {
+    .modal .cover{
+        opacity: 0;
+        z-index: 1;
+        
+    }
+
+    .modal-box{
+        height: 250px;
+        width:350px;
+        margin-left: -110px;   
+        z-index: 2;
+        background-color: rgb(123, 6, 113);
+        position: relative;
+    }
+    .inside-modal{
+        width: 80%;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        background-color: aqua;
+    }
+    .click{
+        position: absolute;
+        bottom:10%;
+        right: 50px;
+    }
+    .modal-event-details h2{
+        font-size: 17px;
+    }
+    .footer p{
+       margin-top: -10px;
+    }
+    .continue{
+        margin-top: 30px;
+        
+    }
+}
+
+ @media (max-width:400px) {
+    .modal .cover{
+        opacity: 0;
+        z-index: 1;
+        
+    }
+
+    .modal-box{
+        height: 260px;
+        width: 360px;
+        margin-left: -120px;      
+        z-index: 2;
+        background-color: rgb(192, 14, 183);
+        position: relative;
+    }
+    .inside-modal{
+        position: absolute;
+        width:84%;
+        top: 15%;
+        
+        background-color: rgb(15, 95, 215);
+    }
+    .click{
+        position: absolute;
+        right: 150px;
+    }
+    .modal-event-details h2{
+        font-size: 17px;
+    }
+    .footer p{
+        margin-top: 0px;
+        margin-left: 15px;
+    }
+    .continue{
+        margin-left:40px;
+        margin-top: 40px;
+    }
+} 

@@ -1,0 +1,54 @@
+
+.my-orders .container{
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+}
+.my-orders-order{
+    display: grid;
+    grid-template-columns: 5fr 2fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+    font-size: 12px;
+    color: #454545;
+    height: 65px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(164, 173, 173);
+    /* border: 1px solid tomato; */
+}
+.my-orders-orders{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 45px;
+    /* background-color: aquamarine; */
+}
+.track{
+    padding:8px;
+    width:120px;
+    border-radius:5px;
+}
+
+/* @media (max-width:1000px) {
+    .my-orders-orders{
+        display: grid;
+        grid-template-columns:auto;
+    }
+} */
+
+@media (max-width:700px) {
+    .my-orders{
+        width:900px;
+         
+    }
+    .container{
+       
+         background-color: black;
+    }
+    .my-orders-orders{
+         display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr  1fr;
+    }
+}
+

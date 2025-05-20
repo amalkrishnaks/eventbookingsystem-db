@@ -1,0 +1,242 @@
+.container{
+    min-height: 800px;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+.place-booking{
+    display: flex;  
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    margin-right:100px;
+    gap:10px;
+    width: 100%;
+    /* background-color: aqua; */
+    /* margin-top: 20px; */
+    /* margin-left: 40px; */
+}
+
+.place-booking-left{
+    width: 100%;
+    max-width: max(30%,500px);
+    /* background-color: black; */
+}
+.place-booking-left .title{
+     font-size: 30px;
+     font-weight: 600;
+     margin-bottom: 50px;
+     margin-left: 10px;
+}
+
+.place-booking-left input{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: tomato;
+}
+
+.place-booking-left .multi-fields{
+    display: flex;
+    gap: 10px;
+}
+
+.multi-fields select{
+    margin-bottom: 15px;
+}
+
+.place-booking-right{
+    height: 410px;
+    width: 450px;
+
+    background-color: rgb(253, 253, 253);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgb(196, 179, 179);
+}
+.upper-part{
+    height: 130px;
+    width: 450px;
+    display: flex;
+    /* background-color: blueviolet; */
+}
+.booking-event-details{
+    height: 160px;
+    width: 300px;
+    /* background-color: aquamarine; */
+}
+
+.booking-image{
+    height: 100px;
+    width: 140px;
+    margin: 20px;
+}
+
+.booking-name{
+    margin-top: 10px;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.book-location{
+    height: 30px;
+    position: absolute;
+    
+}
+
+.booking-location{
+    font-size: large;
+    margin-left: 30px;
+}
+
+
+.event-bottom{
+    height: 180px;
+    width: 430px;
+    /* background-color: aqua; */
+}
+
+.event-total{
+    height: 40px;
+    width: 300px;
+    margin-left: 20px;
+    /* background-color: burlywood; */
+}
+
+.event-total h2{
+    font-size:23px;
+
+    font-weight: 450;
+    font-family:'Poppins', sans-serif !important;
+    
+}
+.event-total-details{
+    display: flex;
+    justify-content:space-between;
+    margin-left: 20px;
+    color: #555;
+}
+
+.event-total-details .tprice{
+    font-weight: 600;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif !important;
+} 
+
+.proceed{
+    background-color: #0DC15C;
+    color: white;
+    padding: 8px 100px;
+    border-radius: 6px;
+    margin: 0px 0px 0px 50px;
+    font-family:'Poppins', sans-serif !important ;
+    cursor: pointer;
+}
+
+
+@media (max-width:1000px) {
+    .container{
+        min-height:100vh;
+        width:1000px;
+        /* background-color: #0DC15C; */
+    }
+    .place-booking{
+    
+     width:100%;
+     margin-left: 70px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     /* background-color: bisque; */
+    }
+   .place-booking-right{
+    margin: 20px;
+   }
+ }   
+
+
+ @media (max-width:700px) {
+  .container{
+    /* min-height:100vh; */
+    width:100%;
+    /* background-color: #0DC15C; */
+    
+  }
+   .place-booking{
+    /* min-height: 225vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+   }
+   .place-booking-left{
+    height:480px;
+    margin-left: 30px;
+    padding: 20px;
+    /* background-color: blue; */
+   }
+   .place-booking-left input{
+    padding: 15px;
+   }
+   .place-booking-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:470px;
+    
+    /* margin-left: 40px; */
+    /* background-color: aqua; */
+   }
+
+}
+ 
+
+  /* @media (max-width:550px) {
+    .container{
+        min-height:100vh;
+        width:1000px;
+        background-color: #0DC15C;
+    }
+    .place-booking{
+     height:300vh;
+     width:100%;
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+     align-items: center;
+     background-color: cornflowerblue;
+   
+    }
+    .place-booking-left input{
+     padding: 10px;
+    }
+   
+       .foter{
+        width:1000px;
+        background-color: brown;
+       }
+    
+}  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,498 @@
+.home{
+   min-height: 700px;
+   min-width: 100%;
+    /* background-color: rgb(231, 104, 13); */
+}
+
+.homefirst-section{
+    height: 650px;
+    width: 100%;
+    /* background-color: blueviolet; */
+}
+
+.homefirst-section video{
+    
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+}
+.homesecond-section{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    background-image: url("/public/aboutbackground.jpg");
+    /* background-color: #704010; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: rgb(226, 43, 177); */
+    
+}
+
+
+.homefirst-section button{
+    position: absolute;
+    bottom: 240px;
+    left:670px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #ee5007;
+    color: white;
+    border: none;
+    cursor: pointer;
+   
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.leftpart{
+    height: 500px;
+    width: 60%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    padding-left: 50px;
+    /* background-color: cadetblue; */
+}
+.rightpart{
+    height: 500px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    /* background-color: rgb(48, 236, 80); */
+}
+.rightpart img{
+    height: 400px;
+    width: 400px;
+    margin: 50px;
+    border-radius: 14px;
+  
+}
+.leftpart .abouth{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.leftpart .about{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.homethird-section{
+    min-height: 850px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: cyan; */
+}
+
+.artist{
+    height: 650px;
+    width: 65%;
+    /* background-color: #ee5007; */
+    display: flex;
+    gap: 30px;
+}
+.names{
+    height: 650px;
+    width: 50%;
+    /* background-color: rgb(25, 186, 23); */
+}
+.names1{
+    height: 700px;
+    width: 50%;
+    /* background-color: cornsilk; */
+    
+}
+.names img{
+    height: 700px;
+    width: 100%;
+    border-radius: 30px;
+   
+}
+
+.rightimg{
+    height: 350px;
+    width: 90%;
+    /* background-color: darkred; */
+    
+}
+.rightimg1{
+    height: 350px;
+    width: 90%;
+    /* background-color: darkkhaki; */
+   
+}
+.rightimg img{
+    height: 330px;
+    width: 100%;
+    border-radius: 30px;
+    
+}
+.rightimg1 img{
+    height: 350px;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.homefourth-section{
+    height: 600px;
+    width: 100%;
+    /* background-color: darkgreen; */
+    
+}
+.contact{
+    height: 600px;
+    width: 100%;
+    /* background-color: darkolivegreen; */
+}
+
+/* @keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}  */
+
+
+
+
+
+
+
+
+ /* @media (max-width:990px) {
+    .home{
+        min-height:470vh;
+        max-width:990px;
+        background-color:yellow;
+    }
+    .homefirst-section{
+        background-color:blue;
+        max-height:500px;
+        width:100%;
+    }
+    .homefirst-section video{
+        height: 500px;
+        width: 100%;
+
+    }
+    .homesecond-section{
+        height:700px;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("/public/aboutbackground.jpg");
+        background-color: #704010;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color:darkgreen;
+    }
+    .homethird-section{
+        width: 100%;
+        background-color:darkred;
+    }
+    .center{
+        height: 430px;
+        width: 100%;
+       
+    }
+    .leftpart{
+        height: 400px;
+        width: 60%;
+        
+    }
+    .leftpart .abouth{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 15px;
+    }
+    .leftpart .about{
+        font-size: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .rightpart{
+        height: 300px;
+        width: 50%;
+    }
+    .rightpart img{
+        
+        height: 250px;
+        width: 70%;
+        
+    }
+    .contact .center-part{
+        height: 120vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .contact .center-part .contact-part{
+        height: 330px;
+    }
+    .contact .center-part .contact-part input{
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .contact .center-part .contact-part{
+        padding: 10px;
+    }
+    .contact .center-part .contact-part button{
+        padding: 6px;
+        
+    }
+} */
+
+@media (max-width:650px) {
+    
+    .home{
+        min-height:460vh;
+        /* background-color: black; */
+        max-width:990px;
+        
+    }
+    
+    .homefirst-section{
+        /* background-color:blue; */
+        max-height:500px;
+        width:100%;
+        
+    }
+    .homefirst-section video{
+        height: 500px;
+        width: 100%;
+
+    }
+    .homesecond-section{
+        height: 120vh;
+        width: 995px;
+        /* background-color: blue; */
+    }
+    .homesecond-section{
+        max-height: 110vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("/public/aboutbackground.jpg");
+        background-color: #704010;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .homethird-section{
+        min-height:500px;
+        width: 100%;
+        /* background-color:darkred; */
+
+    }
+    .names img{
+        height:400px;
+    }
+    .names1 img{
+        height:260px;
+        width:100%;
+    }
+    .center{
+        max-height: 150vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-color: aquamarine; */
+    }
+    
+    
+    .leftpart{
+        height: 350px;
+        width: 100%;
+        /* background-color: #ee5007; */
+        
+    }
+    .leftpart .abouth{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 12px;
+    }
+    .leftpart .about{
+        font-size: 14px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .rightpart{
+        height: 300px;
+        width: 100%;
+    }
+    .rightpart img{
+       
+        height: 250px;
+        width: 80%;
+       
+    }
+    
+    .contact .center-part{
+        height:700px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-color: aqua; */
+    }
+   .contact .center-part .info{
+        height: 300px;
+        width: 95%;
+        /* background-color: blue; */
+    }
+    .contact .center-part .contact-part{
+        height: 330px;
+        width: 380px;
+        /* background-color: brown; */
+    }
+    .contact .center-part .contact-part input{
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .contact .center-part .contact-part{
+        padding: 10px;
+    }
+    .contact .center-part .contact-part button{
+        padding: 6px;
+    }
+    .footer-container{
+        display:grid;
+        grid-template-columns:auto;
+    }
+
+}
+
+/* @media (max-width:300px) {
+     .home{
+        min-height:460vh;
+        background-color: black;
+        width:800px;
+    }
+    
+    .homefirst-section{
+        background-color:blue;
+        max-height:500px;
+        width:100%;
+        
+    }
+    .homefirst-section video{
+        height: 500px;
+        width: 100%;
+
+    }
+    .homesecond-section{
+        height: 100vh;
+        width: 995px;
+        background-color: blue;
+    }
+    .homesecond-section{
+        height: 880px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("/public/aboutbackground.jpg");
+        background-color: #704010;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .homethird-section{
+        min-height:500px;
+        width: 100%;
+        background-color:darkred;
+
+    }
+    .names img{
+        height:400px;
+    }
+    .names1 img{
+        height:260px;
+        width:100%;
+    }
+    .center{
+        height: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aquamarine;
+    }
+    
+    
+    .leftpart{
+        height: 400px;
+        width: 90%;
+        background-color: #ee5007;
+        
+    }
+    .leftpart .abouth{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 22px;
+    }
+    .leftpart .about{
+        font-size: 18px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .rightpart{
+        height: 250px;
+        width: 100%;
+    }
+    .rightpart img{
+       
+        height: 310px;
+        width: 45%;
+       
+    }
+    
+    .contact .center-part{
+        height:700px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+    }
+   .contact .center-part .info{
+        height: 300px;
+        width: 70%;
+        background-color: blue;
+    }
+    .contact .center-part .contact-part{
+        height: 330px;
+        width: 680px;
+        background-color: brown;
+    }
+    .contact .center-part .contact-part input{
+   
+        border-radius: 10px;
+    }
+    .contact .center-part .contact-part{
+        padding: 10px;
+    }
+    .contact .center-part .contact-part button{
+        padding: 6px;
+    }
+    .footer-container{
+        display:grid;
+        grid-template-columns:auto;
+    }
+    
+} */
