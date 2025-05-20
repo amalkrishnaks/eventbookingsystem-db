@@ -19,13 +19,7 @@ module.exports.signUp=async(req,res)=>{
     }
 
     const hashedPassword=await bcrypt.hash(password, 2);
-    
-    // await Login.create({
-    //     name,
-    //     email,
-    //     password :hashedPassword,
 
-    // });
     const newUser=new Login({
         name:name,
         email:email,
@@ -59,60 +53,21 @@ module.exports.login=async(req,res)=>{
             return res.status(400).json({message:"Email or Password incorrect"})
         }
 
-        const key="eventbookingwebsiteklkjkkwewkkvjdwemeqwewejjcggfhokjijihuvfhbhgu345j55weewewenmojok"
-
-
-        const token=jwt.sign({id:user._id},key,{expiresIn:'7d'})
-
-
+         const token=jwt.sign({id:user._id},process.env.JWT_KEY,{expiresIn:'7d'})
 
         return res.status(200).json({message:'Login  Successfully',token});
     } catch (error) {
         res.status(500).json({message:error.message})
-    }
+    }   
 }
 
 
-// API to Store User Location
-// module.exports.userLocation=async(req,res)=>{
-//     try {
-//         const {  latitude, longitude } = req.body;
-//         const newUserLocation = new UserLocation({  latitude, longitude });
-//         await newUserLocation.save();
-//         res.status(201).json({ message: "User location saved successfully!" });
-//       } catch (error) {
-//         res.status(500).json({ error: "Failed to save location" });
-//       }
-// }
-//// API to Get Event Locations
-// module.exports.getLocation=async(req,res)=>{
-//     try {
-//         const events = await Event.find();
-//         res.json(events);
-//       } catch (error) {
-//         res.status(500).json({ error: "Error fetching events" });
-//       }
-// }
 
 
 
 // admin add new event
 module.exports.addEvent=async(req,res)=>{
     try {
-    //    const { name, description, date, time, availableseats, image, location, address } = req.body;
-    // const coordinates = req.body.coordinates || {};
-
-    // const lat = coordinates.lat !== undefined ? parseFloat(coordinates.lat) : null;
-    // const lng = coordinates.lng !== undefined ? parseFloat(coordinates.lng) : null;
-
-
-    // if (lat === null || lng === null || isNaN(lat) || isNaN(lng)) {
-    //     return res.status(400).json({ error: "Invalid coordinates. Please provide lat and lng." });
-    // }
-
-    // console.log("Received Data:", req.body);
-
-    // console.log("Coordinates from frontend:", coordinates);  
     const newEvent = new Event({
             name:req.body.name,
             description:req.body.description,   
@@ -131,40 +86,6 @@ module.exports.addEvent=async(req,res)=>{
         res.status(500).json({message:error.error})
     }
 }
-    // let image_filename=`${req.file.originalname}`;
-    
-
-   
-    // const lat = parseFloat(coordinates.lat) || 0;
-    // const lng = parseFloat(coordinates.lng) || 0;
-    
-
-    
-
-    // const add=new Event({
-    //     name:req.body.name,
-    //     description:req.body.description,   
-    //     date:req.body.date,
-    //     time:req.body.time,
-    //     availableseats:req.body.availableseats,
-    //     image:req.body.image,
-    //     location:req.body.location,
-    //     address:req.body.address,
-    //     coordinates: {
-    //         lat: parseFloat(req.body.coordinates?.lat) || 0,  // Convert to number
-    //         lng: parseFloat(req.body.coordinates?.lng) || 0   // Convert to number
-    //     }
-
-        
-    // }) 
-    
-
-  
-   
-        // await add.save();
-      
-    
-       
     
 
 //event id
@@ -226,16 +147,6 @@ module.exports.editEvent=async(req,res)=>{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 //user
 module.exports.getEvents=async(req,res)=>{
     try {
@@ -250,22 +161,8 @@ module.exports.getEvents=async(req,res)=>{
 module.exports.getDetails= async(req,res)=>{
     try {
         const events=await Event.findById(req.params.id);
-        // if (!events.coordinates) {
-        //     events.coordinates = { lat: 40.748817, lng: -73.985428 }; // Default: San Francisco
-        // }
         if(events) res.json(events);
     } catch (error) {
         res.status(404).send('event not found')
     }
 }
-
-//user payment optionget
-
-// module.exports.getBooking=async(req,res)=>{
-//     try {
-//         const events=await Event.findById(req.params.id);
-//         if(events) res.json(events);
-//     } catch (error) {
-//         res.status(404).send('event not found')
-//     }
-// }

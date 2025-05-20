@@ -26,9 +26,7 @@ module.exports.adminLogin=async(req,res)=>{
             return res.status(400).json({ message: "Invalid credentials" });
           }
           
-           const secretkey="adminloginbookingwebsiteklkjkkwewkkvjdwemeqwewejjcggfhokjijihuvfhbhgu345j55weewewenmojok"
-
-          const token = jwt.sign({ id: admin._id }, secretkey, { expiresIn: "1h" });
+           const token = jwt.sign({ id: admin._id }, process.env.JWT_SECRETKEY, { expiresIn: "1h" });
           
         return res.status(200).json({message:'Signed Up Successfully', token});
     } catch (error) {

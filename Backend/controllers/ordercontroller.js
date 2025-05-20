@@ -57,16 +57,6 @@ module.exports.verifyOrder=async(req,res)=>{
   if(expectedSignature === razorpay_signature){
 
     const payment =await Order.findByIdAndUpdate(orderId,{payment:true})
-
-
-    // const newPayment=new Order({
-      
-    //   paymentStatus:"Success",
-    //   paymentId: razorpay_payment_id,
-      
-    // }) ;
-
-    // await newPayment.save();
     res.json({ message: "Payment successful", payment });
   }else {
 
