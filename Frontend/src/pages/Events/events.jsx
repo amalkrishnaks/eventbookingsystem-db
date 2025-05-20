@@ -29,17 +29,7 @@ const Events=()=>{
    
 
     return <div className="event">
-        {/* <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Events list
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Music events</a>
-    <a class="dropdown-item" href="#">Dance events</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div> */}
-        {/* <h2>Events</h2> */}
+        
         <div className="event-card">
             {events.map((item,index)=>{
                 return(
@@ -52,14 +42,6 @@ const Events=()=>{
 
                        
                         <p className='name'>{item.name}</p>
-                        <div className="loaction">
-                            {/* <img  className='map'src='./public/map.png'></img>
-                            <p className='place'>{item.location}</p> */}
-                        </div>
-                        
-                      
-                        {/* <p className='details'>Description:{item.description}</p> */}
-                        {/* <p>Seat:{item.availableseats}</p> */}
                        
                     </div>
                 )
