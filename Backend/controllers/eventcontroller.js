@@ -1,7 +1,7 @@
 const Event=require('../db/models/event-Schema');
 const Login=require('../db/models/login-Schema')
 const UserLocation=require('../db/models/location-schema')
-const bcrypt=require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt=require('jsonwebtoken');
 const checkToken=require('../middlewares/check-token')
 
