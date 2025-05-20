@@ -6,9 +6,6 @@ import Contact from '../Contact/contact';
 
 const Home=()=>{
     const navigate=useNavigate();
-    // const onClick=()=>{
-    //     navigate('/events')
-    // }
 
 
     return( 
@@ -18,8 +15,6 @@ const Home=()=>{
                     <video autoPlay loop muted>
                     <source src={video} type="video/mp4"/>
                    </video>
-                   {/* <h1 className='ticket'>The simplest way to sell entertainment event tickets</h1> */}
-                   {/* <button>Let's Begin</button> */}
                 </div>
                 <div className="homesecond-section">
                     <div className="center">
