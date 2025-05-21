@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const instance=axios.create({
-    baseURL:'eventbookingsystem-db.vercel.app
-/api/',
+    baseURL:"http://localhost:4000/api/",
     timeout:5000,
 });
 
