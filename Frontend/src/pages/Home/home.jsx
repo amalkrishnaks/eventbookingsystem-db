@@ -27,7 +27,7 @@ const Home=()=>{
                             <p className='about'> Easy Booking Process – Choose your event, select tickets, and complete your payment in just a few clicks.</p>
                     </div>
                     <div className="rightpart">
-                        <img src="/public/aboutus.png"/>
+                        <img src="/public/coldplay.png"/>
                     </div> 
                     
                     </div>
