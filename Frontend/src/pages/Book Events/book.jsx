@@ -29,7 +29,7 @@ const Booking=()=>{
    
     
     const handlePayment = async () => {
-        const response = await axios.post("/order/create",orderData,{ amount:totalPrice  });
+        const response = await axios.post(`${baseURL}/order/create`,orderData,{ amount:totalPrice  });
         const orderId = response?.data?._doc?._id
         
         const options = {

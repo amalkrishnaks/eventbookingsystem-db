@@ -20,7 +20,7 @@ const Details=()=>{
     const eventId = window.location.pathname.split("/")[2];
 
      useEffect(()=>{
-        axios.get(`/user/details/${eventId}`).then((res)=>{
+        axios.get(`${baseURL}/user/details/${eventId}`).then((res)=>{
             setEvent(res.data);
         })
     },[])

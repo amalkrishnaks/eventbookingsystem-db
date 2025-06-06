@@ -22,13 +22,13 @@ const Login=({setShowLogin})=>{
     const onClick=async()=>{
         try {
             if(currState==='Login'){
-                const response=await axios.post('/user/login',login)
+                const response=await axios.post(`${baseURL}/user/login`,login)
                 localStorage.setItem('token',response.data.token);
                 setShowLogin(false)
-                navigate('/');-
+                navigate('/');
                 console.log(response);
             }else{
-                const response=await axios.post('/user/signup',login)
+                const response=await axios.post(`${baseURL}/user/signup`,login)
                 console.log(response.data);
                 toast.success("Registeration successful!");
             }
