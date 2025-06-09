@@ -18,7 +18,7 @@ const Contact=()=>{
         contact:contact
     }
     const handleContact=async()=>{
-        const response=await axios.post(`${baseURL}/contactuser/contact`,contactData)
+        const response=await axios.post(`contactuser/contact`,contactData)
         console.log(response.data);
         
     }

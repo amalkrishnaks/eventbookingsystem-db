@@ -10,7 +10,7 @@ const Collections=()=>{
     const[collection,setCollection]=useState([]);
 
     const fetchOrder=async()=>{
-        const response=await axios.post(`${baseURL}/order/userorder`);
+        const response=await axios.post(`order/userorder`);
        setCollection(response.data.orders)
        console.log(response.data.orders);
         

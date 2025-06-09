@@ -12,7 +12,7 @@ const Events=()=>{
 
     useEffect(()=>{
         try{
-             axios.get(`${baseURL}/user/userevent`).then((res) => {
+             axios.get(`user/userevent`).then((res) => {
             setEvent(res.data.data);
           });
         }catch(error) {
