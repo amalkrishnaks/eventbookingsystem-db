@@ -19,7 +19,7 @@ const Contact=()=>{
         contact:contact
     }
     const handleContact=async()=>{
-        const response=await axios.post('http://localhost:4000/api/contactuser/contact',contactData)
+        const response=await axios.post('https://eventbookingsystem-server.onrender.com/api/contactuser/contact',contactData)
         console.log(response.data);
         
     }

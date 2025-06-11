@@ -30,7 +30,7 @@ const Booking=()=>{
    
     
     const handlePayment = async () => {
-        const response = await axios.post('http://localhost:4000/api/order/create',orderData,{ amount:totalPrice  });
+        const response = await axios.post('https://eventbookingsystem-server.onrender.com/api/order/create',orderData,{ amount:totalPrice  });
         const orderId = response?.data?._doc?._id
         
         const options = {

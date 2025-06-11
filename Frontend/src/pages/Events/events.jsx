@@ -13,7 +13,7 @@ const Events=()=>{
 
     useEffect(()=>{
         try{
-             axios.get('http://localhost:4000/api/user/userevent').then((res) => {
+             axios.get('https://eventbookingsystem-server.onrender.com/api/user/userevent').then((res) => {
             setEvent(res.data.data);
             console.log(events);
             
