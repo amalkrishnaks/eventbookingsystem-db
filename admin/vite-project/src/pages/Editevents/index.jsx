@@ -20,13 +20,13 @@ const EditEvents=()=>{
         const imageData=e.target.files[0];
         const formData=new FormData();  
         formData.append('avatar',imageData);
-        const response=await axios.post("http://localhost:4000/api/image/upload",formData);
+        const response=await axios.post("https://eventbookingsystem-server.onrender.com/api/image/upload",formData);
         
         setData({...data,image:response.data.url});
     } 
 
     const getEventById=async()=>{
-      const response=await axios.get("http://localhost:4000/api/event/details/"+id);
+      const response=await axios.get("https://eventbookingsystem-server.onrender.com/api/event/details/"+id);
       setData(response.data)
     //  console.log(response.data);
     }
@@ -34,7 +34,7 @@ const EditEvents=()=>{
       const onEditBtn = async() => {
         // e.preventDefault();
         try {
-          const response =await axios.patch(`http://localhost:4000/api/event/edit/${id}`, data);
+          const response =await axios.patch(`https://eventbookingsystem-server.onrender.com/api/event/edit/${id}`, data);
           toast.success('Event updated successfully!');
           
         } catch (error) {

@@ -12,12 +12,12 @@ const ListEvents=()=>{
     const navigate=useNavigate()
 
     const fetchList=async()=>{
-        const response=await axios.get("http://localhost:4000/api/event/list");
+        const response=await axios.get("https://eventbookingsystem-server.onrender.com/api/event/list");
         setList(response.data.data);
         // console.log(response);
     }
     const removeEvent=async(Id)=>{
-       const response=await axios.delete("http://localhost:4000/api/event/remove/"+Id)
+       const response=await axios.delete("https://eventbookingsystem-server.onrender.com/api/event/remove/"+Id)
        fetchList();
        if(response.data.success){
         toast.success("Remove")

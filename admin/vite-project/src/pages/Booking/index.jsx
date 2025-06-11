@@ -7,13 +7,13 @@ const BookingEvents=()=>{
     const[booking,setBooking]=useState([]);
 
     const fetchAllOrders=async()=>{
-        const response=await axios.get('http://localhost:4000/api/order/listorder')
+        const response=await axios.get('https://eventbookingsystem-server.onrender.com/api/order/listorder')
         setBooking(response.data.orders)
         console.log(response.data.orders);
         
     }
     const statusHandler=async(event,orderId)=>{
-        const response=await axios.post('http://localhost:4000/api/order/status',{
+        const response=await axios.post('https://eventbookingsystem-server.onrender.com/api/order/status',{
             orderId,
             status:event.target.value
         })
