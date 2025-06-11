@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './collection.css';
-// import axios from '../../Utils/axios'
-import axios from "axios";
+import axios from '../../Utils/axios'
 import Footer from '../../Components/Footer/footer';
 
 
@@ -11,7 +10,7 @@ const Collections=()=>{
     const[collection,setCollection]=useState([]);
 
     const fetchOrder=async()=>{
-        const response=await axios.post('https://eventbookingsystem-server.onrender.com/api/order/userorder');
+        const response=await axios.post('/order/userorder');
        setCollection(response.data.orders)
        console.log(response.data.orders);
         

@@ -1,6 +1,5 @@
 import { useState,useEffect } from 'react';
-// import axios from '../../Utils/axios';
-import axios from "axios";
+import axios from '../../Utils/axios'
 import { ToastContainer,toast } from 'react-toastify';
 import { useLocation, useParams } from 'react-router-dom';
 import './book.css';
@@ -30,7 +29,7 @@ const Booking=()=>{
    
     
     const handlePayment = async () => {
-        const response = await axios.post('https://eventbookingsystem-server.onrender.com/api/order/create',orderData,{ amount:totalPrice  });
+        const response = await axios.post('/order/create',orderData,{ amount:totalPrice  });
         const orderId = response?.data?._doc?._id
         
         const options = {
