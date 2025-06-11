@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Footer from '../../Components/Footer/footer';
 import './contact.css';
-import axios from '../../Utils/axios'
+// import axios from '../../Utils/axios'
+import axios from "axios";
 
 
 
@@ -18,7 +19,7 @@ const Contact=()=>{
         contact:contact
     }
     const handleContact=async()=>{
-        const response=await axios.post(`contactuser/contact`,contactData)
+        const response=await axios.post('http://localhost:4000/api/contactuser/contact',contactData)
         console.log(response.data);
         
     }

@@ -1,6 +1,7 @@
 import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from '../../Utils/axios';
+// import axios from '../../Utils/axios';
+import axios from "axios";
 import './events.css';
 import Footer from '../../Components/Footer/footer';
 
@@ -12,8 +13,10 @@ const Events=()=>{
 
     useEffect(()=>{
         try{
-             axios.get(`user/userevent`).then((res) => {
+             axios.get('http://localhost:4000/api/user/userevent').then((res) => {
             setEvent(res.data.data);
+            console.log(events);
+            
           });
         }catch(error) {
             console.error('Error fetching data:', error);

@@ -1,6 +1,7 @@
 import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from '../../Utils/axios';
+// import axios from '../../Utils/axios';
+import axios from "axios";
 import Modal from '../../Components/Modal/modal';
 import GoogleMapReact from 'google-map-react';
 import './details.css';
@@ -20,7 +21,7 @@ const Details=()=>{
     const eventId = window.location.pathname.split("/")[2];
 
      useEffect(()=>{
-        axios.get(`user/details/${eventId}`).then((res)=>{
+        axios.get(`http://localhost:4000/api/user/details/${eventId}`).then((res)=>{
             setEvent(res.data);
         })
     },[])
