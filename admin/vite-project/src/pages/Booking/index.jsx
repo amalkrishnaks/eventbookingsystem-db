@@ -1,18 +1,19 @@
 import { useEffect, useState } from 'react';
-import axios from "../../Utils.js/axios"
+// import axios from "../../Utils.js/axios";
+import axios from "axios";
 import './booking.css';
 
 const BookingEvents=()=>{
     const[booking,setBooking]=useState([]);
 
     const fetchAllOrders=async()=>{
-        const response=await axios.get('/order/listorder')
+        const response=await axios.get('http://localhost:4000/api/order/listorder')
         setBooking(response.data.orders)
         console.log(response.data.orders);
         
     }
     const statusHandler=async(event,orderId)=>{
-        const response=await axios.post('/order/status',{
+        const response=await axios.post('http://localhost:4000/api/order/status',{
             orderId,
             status:event.target.value
         })

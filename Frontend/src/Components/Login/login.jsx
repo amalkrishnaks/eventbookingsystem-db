@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from '../../Utils/axios';
+// import axios from '../../Utils/axios';
+import axios from "axios";
 import { ToastContainer,toast } from 'react-toastify';
 import './login.css';
 import Events from '../../pages/Events/events';
@@ -22,13 +23,13 @@ const Login=({setShowLogin})=>{
     const onClick=async()=>{
         try {
             if(currState==='Login'){
-                const response=await axios.post(`user/login`,login)
+                const response=await axios.post('http://localhost:4000/api/user/login',login)
                 localStorage.setItem('token',response.data.token);
                 setShowLogin(false)
                 navigate('/');
                 console.log(response);
             }else{
-                const response=await axios.post(`user/signup`,login)
+                const response=await axios.post('http://localhost:4000/api/user/signup',login)
                 console.log(response.data);
                 toast.success("Registeration successful!");
             }

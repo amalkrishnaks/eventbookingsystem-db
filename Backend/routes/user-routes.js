@@ -8,8 +8,7 @@ router.get('/userevent',getEvents);
 router.get('/details/:id',getDetails);
 router.post('/signup',signUp);
 router.post('/login',login)
-// router.post('/location',userLocation)
-// router.get('/eventlocation',getLocation)
+
 
 
 module.exports=router;

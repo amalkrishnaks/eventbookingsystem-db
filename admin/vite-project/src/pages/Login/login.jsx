@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from "../../Utils.js/axios"
+// import axios from "../../Utils.js/axios";
+import axios from "axios";
 import { ToastContainer,toast } from 'react-toastify';
 import './login.css';
 
@@ -14,7 +15,7 @@ const Login=()=>{
 
         const onClick=async()=>{
             try {
-                 const response=await axios.post('/admin/adminlogin',login);
+                 const response=await axios.post('http://localhost:4000/api/admin/adminlogin',login);
                 localStorage.setItem('adminToken',response.data.token);
                 navigate('/add');
                 console.log(response.data);

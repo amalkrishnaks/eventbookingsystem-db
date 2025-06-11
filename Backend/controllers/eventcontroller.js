@@ -27,11 +27,13 @@ module.exports.signUp=async(req,res)=>{
     })
 
     await newUser.save();
+    console.log(newUser);
 
     return res.status(200).json({message:'Signed Up Successfully'});
 
     } catch (e) {
         res.status(500).json({message:e.message})
+        
     }
 }
 
