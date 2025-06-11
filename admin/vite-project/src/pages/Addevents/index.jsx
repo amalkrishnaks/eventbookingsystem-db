@@ -18,7 +18,7 @@ const AddEvents=()=>{
         const imageData=e.target.files[0];
         const formData=new FormData();
         formData.append('avatar',imageData);
-        const response=await axios.post("http://localhost:4000/api/image/upload",formData);
+        const response=await axios.post("https://eventbookingsystem-server.onrender.com/api/image/upload",formData);
         
         setData({...data,image:response.data.url});
     } 
@@ -26,7 +26,7 @@ const AddEvents=()=>{
        const onSumbitBtn = async (e) => {
         // e.preventDefault();
         try {
-          const response = await axios.post('http://localhost:4000/api/event/add',data);
+          const response = await axios.post('https://eventbookingsystem-server.onrender.com/api/event/add',data);
           toast.success('Event booked successfully!');
   
           

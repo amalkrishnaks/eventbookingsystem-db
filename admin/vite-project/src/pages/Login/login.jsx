@@ -15,7 +15,7 @@ const Login=()=>{
 
         const onClick=async()=>{
             try {
-                 const response=await axios.post('http://localhost:4000/api/admin/adminlogin',login);
+                 const response=await axios.post('https://eventbookingsystem-server.onrender.com/api/admin/adminlogin',login);
                 localStorage.setItem('adminToken',response.data.token);
                 navigate('/add');
                 console.log(response.data);
