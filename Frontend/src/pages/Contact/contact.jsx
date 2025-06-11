@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import Footer from '../../Components/Footer/footer';
 import './contact.css';
-// import axios from '../../Utils/axios'
-import axios from "axios";
+import axios from '../../Utils/axios';
 
 
 
@@ -19,7 +18,7 @@ const Contact=()=>{
         contact:contact
     }
     const handleContact=async()=>{
-        const response=await axios.post('https://eventbookingsystem-server.onrender.com/api/contactuser/contact',contactData)
+        const response=await axios.post('/contactuser/contact',contactData)
         console.log(response.data);
         
     }
