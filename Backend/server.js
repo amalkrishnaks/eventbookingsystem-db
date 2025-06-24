@@ -4,7 +4,12 @@ const env=require( 'dotenv/config');
 const app=express();
 const PORT=process.env.PORT || 4000 ;
 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: 'https://eventbookingsystem-db1-h62j7c0oa-amal-krishna-k-s-projects.vercel.app',
+  credentials: true, // if using cookies or auth headers
+}));
+
 app.use(express.json());
 app.use(express.static('public'));
 
