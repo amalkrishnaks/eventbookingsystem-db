@@ -7,7 +7,8 @@ const PORT=process.env.PORT || 4000 ;
 // app.use(cors());
 
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin: "https://eventbookingsystem-db1.vercel.app",
+  methods: ["GET", "POST","PATCH","PUT","DELETE"],
   credentials: true
 }));
 
