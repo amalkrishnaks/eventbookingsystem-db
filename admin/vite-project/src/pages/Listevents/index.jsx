@@ -1,7 +1,6 @@
 import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import axios from "../../Utils.js/axios";
-import axios from "axios";
+import axios from "../../Utils.js/axios"
 import { ToastContainer,toast } from 'react-toastify';
 import './list.css';
 
@@ -12,12 +11,12 @@ const ListEvents=()=>{
     const navigate=useNavigate()
 
     const fetchList=async()=>{
-        const response=await axios.get("https://eventbookingsystem-server.onrender.com/api/event/list");
+        const response=await axios.get("/event/list");
         setList(response.data.data);
         // console.log(response);
     }
     const removeEvent=async(Id)=>{
-       const response=await axios.delete("https://eventbookingsystem-server.onrender.com/api/event/remove/"+Id)
+       const response=await axios.delete("/event/remove/"+Id)
        fetchList();
        if(response.data.success){
         toast.success("Remove")

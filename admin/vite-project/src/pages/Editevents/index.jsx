@@ -2,8 +2,7 @@ import { useState,useEffect } from 'react';
 import { useNavigate,useParams} from 'react-router-dom';
 import Input from '../../components/Input';
 import { ToastContainer,toast } from 'react-toastify';
-// import axios from "../../Utils.js/axios";
-import axios from "axios";
+import axios from "../../Utils.js/axios"
 import './edit.css';
 
 const EditEvents=()=>{
@@ -20,13 +19,13 @@ const EditEvents=()=>{
         const imageData=e.target.files[0];
         const formData=new FormData();  
         formData.append('avatar',imageData);
-        const response=await axios.post("https://eventbookingsystem-server.onrender.com/api/image/upload",formData);
+        const response=await axios.post("/image/upload",formData);
         
         setData({...data,image:response.data.url});
     } 
 
     const getEventById=async()=>{
-      const response=await axios.get("https://eventbookingsystem-server.onrender.com/api/event/details/"+id);
+      const response=await axios.get("/event/details/"+id);
       setData(response.data)
     //  console.log(response.data);
     }
@@ -34,7 +33,7 @@ const EditEvents=()=>{
       const onEditBtn = async() => {
         // e.preventDefault();
         try {
-          const response =await axios.patch(`https://eventbookingsystem-server.onrender.com/api/event/edit/${id}`, data);
+          const response =await axios.patch(`/event/edit/${id}`, data);
           toast.success('Event updated successfully!');
           
         } catch (error) {
