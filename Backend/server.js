@@ -7,7 +7,7 @@ const PORT=process.env.PORT || 4000 ;
 // app.use(cors());
 const allowedOrigins = [
   'http://localhost:4000',
-  'https://eventbookingsystem-db1-5wqxbvb3j-amal-krishna-k-s-projects.vercel.app/',
+  'https://eventbookingsystem-db1-amal-krishna-k-s-projects.vercel.app/',
 ];
 app.use(cors({
   origin: function (origin, callback) {
