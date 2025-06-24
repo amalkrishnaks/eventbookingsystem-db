@@ -4,20 +4,12 @@ const env=require( 'dotenv/config');
 const app=express();
 const PORT=process.env.PORT || 4000 ;
 
-app.use(cors({ origin: '*' }));
-// const allowedOrigins = [
-//   'http://localhost:4000',
-//   'https://eventbookingsystem-db1-amal-krishna-k-s-projects.vercel.app/',
-// ];
-// app.use(cors({
-//   origin: function (origin, callback) {
-//     if (!origin || allowedOrigins.includes(origin)) {
-//       return callback(null, true);
-//     }
-//     return callback(new Error('Not allowed by CORS'));
-//   },
-//   credentials: true,
-// }));
+// app.use(cors());
+
+app.use(cors({
+  origin: process.env.CLIENT_URL,
+  credentials: true
+}));
 
 app.use(express.json());
 app.use(express.static('public'));
