@@ -5,9 +5,18 @@ const app=express();
 const PORT=process.env.PORT || 4000 ;
 
 // app.use(cors());
+const allowedOrigins = [
+  'http://localhost:4000',
+  'https://eventbookingsystem-db1-amal-krishna-k-s-projects.vercel.app',
+];
 app.use(cors({
-  origin: 'https://eventbookingsystem-db1-amal-krishna-k-s-projects.vercel.app',
-  credentials: true, // if using cookies or auth headers
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true,
 }));
 
 app.use(express.json());
