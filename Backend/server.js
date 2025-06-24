@@ -6,7 +6,7 @@ const PORT=process.env.PORT || 4000 ;
 
 // app.use(cors());
 app.use(cors({
-  origin: 'https://eventbookingsystem-db1-h62j7c0oa-amal-krishna-k-s-projects.vercel.app',
+  origin: 'https://eventbookingsystem-db1-amal-krishna-k-s-projects.vercel.app',
   credentials: true, // if using cookies or auth headers
 }));
 
