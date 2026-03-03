@@ -1,77 +1,84 @@
 .foter {
-    width: 100%;
-    background-color: #222;
-    color: #fff;
-    padding: 40px 0;
-    text-align: center;
-    
-  
+  width: 100%;
+  background: var(--bg-darker);
+  border-top: 1px solid var(--glass-border);
+  padding: 80px 5% 40px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section ul li a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 0.95rem;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary);
+  padding-left: 5px;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.social-icon {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid var(--glass-border);
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .foter {
+    padding-top: 60px;
   }
-  
+
   .footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 2.5rem;
   }
-  
-  .footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin: 10px;
-    
-  }
-  
-  .footer-section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-  }
-  
-  .footer-section p {
-    font-size: 0.9rem;
-    color: #bbb;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li {
-    margin: 8px 0;
-  }
-  
-  .footer-section ul li a {
-    color: #ffcc00;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer-section ul li a:hover {
-    color: #fff;
-  }
-  
-  .social-links {
-    margin-top: 10px;
-  }
-  
-  .social-icon {
-    margin: 0 8px;
-    font-size: 1.5rem;
-    text-decoration: none;
-  }
-  
-  .footer-bottom {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #444;
-  }
-  
-  @media (max-width:700px) {
-    .foter{
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-  }
+}

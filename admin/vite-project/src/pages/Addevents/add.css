@@ -1,61 +1,93 @@
-.container{
-    min-height: 700px;
-    min-width: 100%;
-    /* background-color: cyan; */
+.container {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    background: var(--bg-darker);
 }
 
-
-
-.add{
-    color: #6d6d6d;
-    font-size: 16px;
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgb(199, 207, 213);
-    /* background-color: cornflowerblue;    */
+.add {
+    width: 100%;
+    max-width: 600px;
+    background: var(--bg-dark);
+    border: 1px solid var(--glass-border);
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
 }
 
-
-
-.add form{
-    gap: 20px;
-    
+.add h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(to right, #fff, var(--text-muted));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.add input{
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.add-event-name p,
+.add-event-description p,
+.add-event-date p,
+.add-event-seats p,
+.add-event-location p,
+.add-event-image p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+input[type="file"] {
     padding: 10px;
-    width: 400px;
-    
-}
-.add-event-name, .add-event-description{
-    width: max(400px);
-}
-
-
-
-.btn{
-    max-width: 120px;
-    border: none;
-    margin-top: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: green;
+    background: var(--glass);
     cursor: pointer;
 }
 
+input[type="file"]::-webkit-file-upload-button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
 
+input[type="file"]::-webkit-file-upload-button:hover {
+    background: var(--primary-hover);
+}
 
-/* @media (max-width:400px) {
-    .container{
-        min-height:240vh;
-        width: 960px;
-        background-color: crimson;
+.btn {
+    margin-top: 2rem;
+    padding: 16px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 650px) {
+    .add {
+        margin: 1.5rem;
+        padding: 2rem;
     }
-    .add{
-        
-        width: 50%;
-    }
-} */
+}

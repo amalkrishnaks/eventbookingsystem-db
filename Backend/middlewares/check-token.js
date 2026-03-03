@@ -1,7 +1,7 @@
 const jwt=require('jsonwebtoken');
 
 
-const checkToken=(req,res,next)=>{
+module.exports =(req,res,next)=>{
 try {
 
     const bearertoken=req.headers.authorization;
@@ -15,7 +15,7 @@ try {
     console.log(token);
     
     //check the token valid
-     const key="eventbookingwebsiteklkjkkwewkkvjdwemeqwewejjcggfhokjijihuvfhbhgu345j55weewewenmojok"
+     const key="eventbookingwebsiteklkjkkwewkkvjdwemeqwewejjcggfhokjijihuvfhbhgu345j55weewewenmojok";
 
      const tokenValid=jwt.verify(token, key);
      console.log(tokenValid);
@@ -27,4 +27,3 @@ try {
 }
 }
 
-module.exports=checkToken;

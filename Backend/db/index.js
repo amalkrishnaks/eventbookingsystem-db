@@ -1,7 +1,9 @@
-const mongoose=require('mongoose');
+const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URL)
-.then(() => console.log("DB connected"))
-.catch((err) => console.error(err));
+const mongoURL = process.env.MONGODB_URL || "mongodb://localhost:27017/Event-Booking-DB-3";
 
-module.exports=mongoose;
+mongoose.connect(mongoURL)
+    .then(() => console.log("DB connected"))
+    .catch((err) => console.error(err));
+
+module.exports = mongoose;    
